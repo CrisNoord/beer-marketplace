@@ -1,0 +1,82 @@
+:host {
+    display: flex;
+    justify-content: center;
+    width: 327px;
+    align-self: center;
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        width: 327px;
+        padding-top: 40px;
+    
+        .menu-profile-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            .profile-picture {
+                width: 47px;
+                height: 47px;
+                border-radius: 100%;
+            }
+        }
+    
+        .welcome-message-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 24px;
+    
+            .name {
+                font-family: 'DM Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 21px;                        
+                color: #646464;
+                opacity: 0.6;
+                margin: 0;
+            }
+    
+            .message {
+                font-family: 'DM Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 31px;            
+                color: #323232;
+                margin: 0;
+            }
+        }
+    
+        .search-bar-container {
+            width: 327px;
+            .search-bar {
+                display: flex;
+                align-items: center;
+                height: 48px;
+                width: 316px;
+                margin-top: 12.5px;
+                padding-left: 11px;
+                background: #FFFFFF;   
+                border-radius: 12px; 
+                .search-input {
+                    margin-left: 11.5px;
+                    width: 301.5px;
+                    background: #FFFFFF;                
+                    border: none;
+                }
+                ::placeholder {
+                    color: #C4C4C4;
+                }
+                .search-bar:focus,
+                input:focus {
+                    outline: none;
+                }
+                i {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}

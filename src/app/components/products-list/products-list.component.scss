@@ -1,0 +1,42 @@
+.list-main-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .sub-category {
+        margin-top: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 327px;
+        align-self: center;
+
+        .name {
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 23px;            
+            color: #323232;
+        }
+
+        .see-all {
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 14px;
+            color: #646464;
+            opacity: 0.6;
+        }
+    }
+
+    .products-container {
+        margin-top: 16px;
+        display: grid;
+        gap: 20px 10px;
+        grid-column-gap: 13px;
+        grid-row-gap: 16px;
+        grid-template-columns: repeat(auto-fill, minmax(auto, 155px));
+        justify-content: center;
+    }
+}

@@ -1,0 +1,63 @@
+:host {
+    display: flex;
+    width: 327px;
+    align-self: center;
+
+    .drink-categories-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 32px;
+        width: 100%;
+    
+        .title-and-button {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 16px;
+            .title  {
+                font-family: 'DM Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 23px;
+                color: #323232;
+            }
+    
+            .see-all {
+                font-family: 'DM Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 14px;
+                color: #646464;
+                opacity: 0.6;
+            }
+        }
+    
+        .categories {
+            display: flex;
+            justify-content: space-between;
+    
+            .category {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-width: 58px;
+                height: 48px;
+                background: #FFFFFF;
+                border-radius: 12px;
+                font-family: 'DM Sans';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 16px;
+                color: #323232;
+    
+                &.selected {
+                    background: #FF9F24;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+}

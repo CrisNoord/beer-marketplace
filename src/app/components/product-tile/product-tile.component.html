@@ -1,0 +1,17 @@
+<div class="main-container">
+    <div class="product-title">
+        <h5>{{product?.brand}}</h5>
+    </div>
+    <div class="image-container">
+        <img 
+        [src]="product?.image" 
+        onerror="this.onerror=null; this.src='/assets/icons/Beer.png'"
+        >
+    </div>
+    <div class="footer">
+        <span class="price">{{product?.price}}</span>
+        <div class="add">
+            <i class="fa-solid fa-plus"></i>
+        </div>
+    </div>
+</div>

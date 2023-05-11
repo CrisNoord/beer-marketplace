@@ -1,0 +1,11 @@
+<div class="drink-categories-container">
+    <div class="title-and-button">
+        <span class="title">Drink Category</span>
+        <div class="see-all">See All</div>
+    </div>
+    <div class="categories">
+        <div class="category" *ngFor="let category of categories" [ngClass]="{selected: category.selected}">
+            {{category.name}}
+        </div>
+    </div>
+</div>

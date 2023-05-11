@@ -1,0 +1,42 @@
+<div class="pdp-container">
+    <div class="pdp-header">
+        <i (click)="goBack()" class="fa-solid fa-arrow-left"></i>
+        <span>Details</span>
+        <i class="fa-solid fa-ellipsis"></i>
+    </div>
+    <div class="pdp-image">
+        <img 
+        [src]="product?.image" 
+        onerror="this.onerror=null; this.src='/assets/icons/Beer.png'"
+        >
+    </div>
+    <div class="details">
+        <div class="header-details">
+            <div class="left-side">
+                <span class="name">{{product?.brand}}</span>
+                <span class="origin-stock">Origin: {{product?.origin}} | Stock: {{skuData?.stock}}</span>
+            </div>
+            <div class="right-side">
+                <span>{{skuData?.price}}</span>
+            </div>
+        </div>
+        <div class="description">
+            <span class="title">Description</span>
+            <p class="description-text" [ngClass]="{'expanded': expanded}">{{product?.information}}</p>
+            <span class="span-text" *ngIf="!expanded" (click)="expandOrHideText()">Read more</span>
+            <span class="span-text" *ngIf="expanded" (click)="expandOrHideText()">Show less</span>
+        </div>
+        <div class="skus-container">
+            <span class="title">Size</span>
+            <div class="sku-list">
+                <div (click)="selectSku(sku.code)" class="sku" [ngClass]="{'selected': sku.code === selectedSku}" *ngFor="let sku of product?.skus">{{sku.name}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="buttons-container">
+        <div class="bag">
+            <i class="fa-solid fa-bag-shopping"></i>        
+        </div>
+        <button class="add-button">Add to cart</button>
+    </div>
+</div>

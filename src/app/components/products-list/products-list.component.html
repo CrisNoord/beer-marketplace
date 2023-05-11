@@ -1,0 +1,16 @@
+<div class="list-main-view">
+    <app-header></app-header>
+    <app-drink-categories></app-drink-categories>
+    <div class="sub-category">
+        <span class="name">Populer</span>
+        <span class="see-all">See All</span>
+    </div>
+    <div class="products-container">
+        <app-product-tile
+          *ngFor="let product of products"
+          [product]="product"
+          (click)="selectProduct(product)"
+        >
+        </app-product-tile>
+      </div>
+</div>
